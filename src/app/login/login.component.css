@@ -1,0 +1,157 @@
+.loginContainer {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    user-select: none;
+}
+
+.loginBody {
+    display: flex;
+    flex-basis: 94%;
+}
+
+.loginFields {
+    flex-basis: 25%;
+    background-color:#000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.wallpaper {
+    flex-basis: 75%;
+    background-image: url('../../assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.branding {
+    flex-basis: 33%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    position: relative;
+    align-items: center;
+}
+
+.branding h1,.branding h4, .branding h5 {
+    font-weight: normal;
+    margin:0;
+    padding:0;
+}
+
+.branding h1 {
+    display: block;
+    width: 100%;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+.loginForm {
+    padding: 0.5em;
+    flex-basis: 45%;
+    background-color: rgba(255,255,255,0.15);;
+    border-radius: 4px;
+}
+
+.loginForm h4 {
+    margin:0;
+    margin-bottom: 0.5em;
+}
+
+.loginForm ul {
+    margin:0;
+    padding:0;
+    margin-bottom: 0.5em;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+.loginForm ul li {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    /* border-radius: 4px;
+    overflow: auto; */
+}
+
+.loginForm ul li:nth-child(odd):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 1px;
+    background-color: #bbb;
+    z-index: 3;
+}
+
+.loginForm ul li label {
+    flex-basis: 10%;
+    padding: 0.5em;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    position: relative;
+}
+
+/* .loginForm ul li label:after {
+    content: "";
+    position: absolute;
+    right:0;
+    top:4px;
+    bottom: 4px;
+    background-color: #ccc;
+    width: 1px;
+} */
+
+.loginForm ul li input {
+    flex-basis: 90%;
+    border-radius: 0 !important;
+    color: #333;
+    background-color: #f8f8f8;
+    position: relative;
+    z-index: 1;
+}
+
+.loginBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginFooter {
+    flex-basis: 22%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.errorMsg {
+    color: white;
+    background-color: indianred;
+    padding: 0.5em;
+    position: absolute;
+    /* display: flex; */
+    border-radius: 4px;
+    align-items: center;
+    top: 15%;
+    font-size: 10px;
+    right: 2%;
+    width: auto;
+    z-index: 1;
+}

@@ -1,0 +1,25 @@
+<header>
+  <div class="logo">Lifehouse | Stoneridge</div>
+  <ul>
+    <li *ngIf="afterLogin">
+      <a title="Search">
+        <i class="fa fa-search"></i>
+      </a>
+    </li>
+    <li *ngIf="afterLogin">
+      <a title="Preferences">
+        <i class="fa fa-cogs"></i>
+      </a>
+    </li>
+    <li>
+      <a title="About">
+        <i class="fa fa-info-circle"></i>
+      </a>
+    </li>
+    <li *ngIf="afterLogin">
+      <a (click)="logOut()" title="Logout">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </li>
+  </ul>
+</header>

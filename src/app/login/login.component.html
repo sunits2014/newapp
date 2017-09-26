@@ -1,0 +1,45 @@
+<div class="loginContainer">
+  <app-header></app-header>
+  <div class="loginBody">
+    <div class="loginFields">
+      <div class="branding">
+        <h1>Lifehouse</h1>
+      </div>
+      <form [formGroup]="loginForm" novalidate (submit)="login()" class="loginForm">
+        <h4>Authentication</h4>
+        <ul>
+          <li>
+            <label for="username">
+              <i class="ion-ios-person"></i>
+            </label>
+            <input autocomplete="off" maxlength="15" formControlName="username" id="username" type="text" class="textInput" placeholder="Username" onfocus="this.placeholder=''"
+              onblur="this.placeholder='Username'">
+            <small class="errorMsg" *ngIf="loginForm.get('username').hasError('minlength') && loginForm.get('username').dirty">Minimum length is 3.</small>            
+            <small class="errorMsg" *ngIf="loginForm.get('username').hasError('maxlength') && loginForm.get('username').dirty">Maximum length is 12.</small>                        
+            <small class="errorMsg" *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').dirty">Username is required.</small>            
+          </li>
+          <li>
+            <label for="password">
+              <i class="ion-ios-locked"></i>
+            </label>
+            <input autocomplete="off" formControlName="password" id="password" type="password" class="textInput" placeholder="Password" onfocus="this.placeholder=''"
+              onblur="this.placeholder='Password'">
+            <small class="errorMsg" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').dirty">Password is required.</small>
+            <small class="errorMsg" *ngIf="loginForm.get('password').hasError('pattern') && loginForm.get('password').dirty">Pattern mismatch.</small>                                                
+          </li>
+        </ul>
+        <div class="loginBtn">
+          <button type="submit" class="btn">Login</button>
+        </div>
+        <small *ngIf="showOnEvent" [innerText]="msgText" [ngStyle]="customStyle"></small>
+      </form>
+      <div class="loginFooter">
+        <small>
+          <i class="fa fa-copyright"></i>
+          <span>Stoneridge Corporation 2017</span>
+        </small>
+      </div>
+    </div>
+    <div class="wallpaper"></div>
+  </div>
+</div>

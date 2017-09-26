@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    flex-basis: 100%;
+    /* align-items: center; */
+    color: white;
+}
+
+.logo {
+    flex-basis: 40%;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    margin:0;
+    padding:0;
+    flex-basis: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+ul li a {
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

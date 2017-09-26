@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    margin:0;
+    padding:0;
+}
+
+* {
+    font-family: Segoe UI;
+    /* font-size: 13px; */
+}
+
+.container {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    display: flex;
+}
+
+app-header {
+    flex-basis:6%;
+    width: 100%;
+    display: flex;
+    background-color: #333;
+}
+
+.textInput {
+    padding: 0.5em;
+    border: none;
+    border-radius: 4px;
+}
+
+.textInput:focus {
+    outline: none;
+}
+
+.btn {
+    padding:1em 1.5em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-color: dodgerblue;
+    border:none;
+    cursor: pointer;
+    color: white;
+    line-height: 12px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:disabled {
+    background-color: #555;
+    color: #666;
+}
