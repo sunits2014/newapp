@@ -29,6 +29,7 @@ app-header {
     padding: 0.5em;
     border: none;
     border-radius: 4px;
+    text-overflow: ellipsis;
 }
 
 .textInput:focus {
@@ -45,6 +46,26 @@ app-header {
     cursor: pointer;
     color: white;
     line-height: 12px;
+    position: relative;
+    box-shadow: 0 0 0px 1px white inset;
+}
+
+/* .btn:after {
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    background-color: rgba(255,255,255,0.5);
+    transform: scale(0);
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+} */
+
+.btn:active {
+    transform: translateY(1px);
+    background-color: rgba(30,144,255,0.5);
 }
 
 .btn:focus {

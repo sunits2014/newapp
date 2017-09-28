@@ -9,3 +9,25 @@
     right: 0;
     user-select: none;
 }
+
+.dashboardBody {
+    flex-basis: 94%;
+    display: flex;
+}
+
+.menu {
+    flex-basis: 20%;
+    background-color: silver;   
+    display: flex;
+    flex-direction: column; 
+}
+
+app-menu {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.content {
+    flex-basis: 80%;
+}

@@ -19,6 +19,6 @@ export class DashboardComponent implements OnInit {
     }else {
       this.headerMenus = false;
     }
-  }
+  }  
 
 }

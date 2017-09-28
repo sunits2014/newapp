@@ -1,24 +1,29 @@
 <header>
   <div class="logo">Lifehouse | Stoneridge</div>
   <ul>
-    <li *ngIf="afterLogin">
-      <a title="Search">
-        <i class="fa fa-search"></i>
+    <li *ngIf="afterLogin" (click)="setView('search')">
+      <form>
+        <div>
+          <input [(ngModel)]="codeSearch" name="codeSearch" type="text" class="textInput" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+          <a title="Search" (click)="getCode()">
+              <i class="ion-funnel"></i>
+            </a>
+        </div>
+      </form>
+    </li>
+    <li *ngIf="afterLogin" (click)="setView($event,'settings')">
+      <a [class.activeItem]="propselected"  title="Preferences">
+        <i class="ion-settings"></i>
       </a>
     </li>
-    <li *ngIf="afterLogin">
-      <a title="Preferences">
-        <i class="fa fa-cogs"></i>
-      </a>
-    </li>
-    <li>
-      <a title="About">
-        <i class="fa fa-info-circle"></i>
+    <li (click)="setView($event,'about')">
+      <a [class.activeItem]="aboutselected"  title="About">
+        <i class="ion-information-circled"></i>
       </a>
     </li>
     <li *ngIf="afterLogin">
       <a (click)="logOut()" title="Logout">
-        <i class="fa fa-power-off"></i>
+        <i class="ion-power"></i>
       </a>
     </li>
   </ul>

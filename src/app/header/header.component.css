@@ -3,6 +3,8 @@ header {
     flex-basis: 100%;
     /* align-items: center; */
     color: white;
+    position: relative;
+    z-index: 1;
 }
 
 .logo {
@@ -23,6 +25,8 @@ ul {
 ul li {
     list-style-type: none;
     display: inline-flex;
+    position: relative;
+    padding: 0.25em;
 }
 
 ul li a {
@@ -30,4 +34,73 @@ ul li a {
     display: flex;
     align-items: center;
     cursor: pointer;
+    border-radius: 4px;
+}
+
+ul li a:hover {
+    background-color: silver;
+    color: #333;
+}
+
+ul li form {
+    /* padding: 0.5em;
+    border-radius: 4px;
+    background-color: silver; */
+    display: flex;
+}
+
+ul li form div {
+    display: flex;
+    /* border-radius: 4px; */
+    /* align-items: center; */
+    /* padding: 0.25em; */
+    padding-right: 0;
+    background-color: black;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+ul li form div input {
+    flex-basis: 95%;
+    border-radius: 0 !important;
+    width: 150px;
+    transition: all 0.1s ease-in-out;
+}
+
+ul li form div input:focus {
+    width: 200px;
+    transition: all 0.1s ease-in-out;
+}
+
+ul li form div a {
+    flex-basis: 5%;
+    border-radius: 0 !important;
+    background-color: white;
+    color: #333; 
+    position: relative;  
+}
+
+ul li form div a:hover {
+    background-color: white !important;
+    color: #333;
+}
+
+ul li form div a:before {
+    content: "";
+    position: absolute;
+    left:0;
+    top:10%;
+    bottom:10%;
+    width: 1px;
+    background-color: silver;
+}
+
+ul li form div a:active {
+    color: silver;
+}
+
+.activeItem {
+    background-color: silver;
+    color: #333;
+    position: relative;
 }
